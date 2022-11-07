@@ -3,6 +3,8 @@ import styled from "styled-components";
 import {CSSReset} from "../src/components/CSSReset";
 import Menu from "../src/components/Menu"
 import { StyledTimeline } from "../src/components/Timeline";
+import {StyledFavoritos} from "../src/components/Favoritos";
+import {StyledBanner} from "../src/components/Banner";
 
 function HomePage() {
 
@@ -15,9 +17,11 @@ function HomePage() {
                 flex: 1,
                 // backgroundColor: "red",
             }}>
+                <Banner/>
                 <Menu />
                 <Header />
                 <Timeline playlists={config.playlists}/>
+                <Favoritos playlistFavoritos={config.playlistFavoritos}/>
             </div>
         </>
     );
@@ -30,6 +34,13 @@ function HomePage() {
 //         <div>Menu</div>    
 //     )
 // }
+function Banner(){
+    return (
+        <StyledBanner>
+            <img src={config.banner}/>
+        </StyledBanner>    
+    )
+}
 
 const StyledHeader = styled.div`
     img{
@@ -38,7 +49,6 @@ const StyledHeader = styled.div`
         border-radius: 50%;
     }
     .user-info{
-        margin-top: 50px;
         display: flex;
         align-items: center;
         width: 100%;
@@ -72,7 +82,7 @@ function Timeline(props){
                         <h2>{playlistName}</h2>
                         <div>
                             {
-                                videos.map((video) => {
+                                videos.map(video => {
                                     return (
                                         <a href={video.url}>
                                             <img src={video.thumb}/>
@@ -86,5 +96,33 @@ function Timeline(props){
                 )
             })}
         </StyledTimeline>    
+    )
+}
+function Favoritos(props){
+    const favoritosNames = Object.keys(props.playlistFavoritos);
+    return (
+        <StyledFavoritos>
+            {favoritosNames.map(favoritoName => {
+            
+               const bloco = props.playlistFavoritos[favoritoName];
+               return (
+                    <section>
+                        <h2>{config.titleAluraFavoritos}</h2>
+                      <div>
+                        {
+                            bloco.map(blo => {
+                                return (
+                                    <div>
+                                        <img src={blo.perfil}/>
+                                        <p>{blo.name}</p>
+                                    </div>
+                                )
+                            })
+                        }
+                      </div>
+                    </section>
+                )
+            })}
+        </StyledFavoritos>    
     )
 }

@@ -2,6 +2,20 @@
   "name": "Mario Souto (DevSoutinho)",
   "job": "Lead Software Engineer",
   "github": "omariosouto",
+  "banner": "https://img.youtube.com/vi/QsqatJxAUtk/hqdefault.jpg",
+  "titleAluraFavoritos": "AluraTubes Favoritos",
+  "playlistFavoritos":{
+    "favoritos": [
+        {
+            "perfil": "https://avatars.githubusercontent.com/u/71636?v=4?s=100",
+            "name": "@peas"
+        },
+        {
+            "perfil": "https://pbs.twimg.com/profile_images/1410265044424835074/IzPGXGbY_400x400.jpg",
+            "name": "@omariosouto"
+        }
+    ]
+    },
   "playlists": {
     "jogos": [
       {
