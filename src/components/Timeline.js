@@ -5,6 +5,7 @@ export const StyledTimeline = styled.div`
   width: 100%;
   padding: 16px;
   overflow: hidden;
+ 
   h2 {
     font-size: 16px;
     margin-bottom: 16px;
@@ -17,7 +18,7 @@ export const StyledTimeline = styled.div`
     width: 100%;
     max-width: 210px;
     height: auto;
-}
+  }
   section {
     width: 100%;
     padding: 0;
@@ -25,7 +26,6 @@ export const StyledTimeline = styled.div`
     padding: 16px;
     padding-right: 0;
     div {
-      
       width: calc(100vw - 16px * 4);
       display: grid;
       grid-gap: 16px;
@@ -40,7 +40,7 @@ export const StyledTimeline = styled.div`
           padding-top: 8px;
           display: block;
           padding-right: 24px;
-          color: ${({ theme }) => theme.textColorBase || "#222222"};
+          /* color: ${({ theme }) => theme.textColorBase || "#222222"}; */
         }
       }
     }

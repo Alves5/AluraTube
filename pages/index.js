@@ -51,7 +51,7 @@ const StyledBanner = styled.div`
 `;
 function Header(){
     return (
-        <StyledHeader>
+        <StyledHeader className="header">
             <StyledBanner />
             <section className="user-info">
                 <img src={`https://github.com/${config.github}.png`}/>
@@ -66,7 +66,7 @@ function Header(){
 function Timeline({searchValue, ...props}){
     const playlistNames = Object.keys(props.playlists);
     return (
-        <StyledTimeline>
+        <StyledTimeline className="timeline">
             {playlistNames.map(playlistName => {
                 const videos = props.playlists[playlistName];
                 return (
@@ -81,7 +81,7 @@ function Timeline({searchValue, ...props}){
                                 return (
                                     <a key={video.url} href={video.url}>
                                         <img src={video.thumb}/>
-                                        <span>{video.title}</span>
+                                        <span className="span">{video.title}</span>
                                     </a>
                                 )
                             })}

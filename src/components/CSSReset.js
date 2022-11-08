@@ -7,9 +7,6 @@ export const CSSReset = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-  body {
-    font-family: sans-serif;
-  }
   /* NextJS */
   html {
     display: flex;
@@ -19,6 +16,8 @@ export const CSSReset = createGlobalStyle`
   body {
     display: flex;
     flex: 1;
+    font-family: sans-serif;
+    overflow-x: hidden;
   }
   #__next {
     display: flex;

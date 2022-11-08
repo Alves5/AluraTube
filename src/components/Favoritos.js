@@ -19,10 +19,14 @@ export const StyledFavoritos = styled.div`
     div{
       display: inline-block;
       margin: 0 5px 0 5px;
+      text-align: center;
       img{
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         border-radius: 50%;
+      }
+      p{
+        font-size: 13px;
       }
     }
   }
