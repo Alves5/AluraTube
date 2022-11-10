@@ -16,6 +16,8 @@ export const CSSReset = createGlobalStyle`
   body {
     display: flex;
     flex: 1;
+    background-color: ${({theme}) => theme.backgroundBase};
+    color: ${({theme}) => theme.textColorBase};
     font-family: sans-serif;
     overflow-x: hidden;
   }

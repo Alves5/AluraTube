@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "./Theme";
-import GlobalTheme from "./Globals";
+import { lightTheme, darkTheme } from "../DarkmodeV1/Theme";
+import GlobalTheme from "../DarkmodeV1/Globals";
 import styled from "styled-components";
 
 function DarkMode() {
